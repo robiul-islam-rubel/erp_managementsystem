@@ -35,7 +35,7 @@
         
         <div class="login-footer mt-5">
             <p>New User? <a class="mt-5" href="{{url('/register')}}">Create New Account</a></p>
-            <p>Visit Uttara University <a class="mt-5" href="">Official website</a></p>
+            <p>Visit Uttara University <a class="mt-5" href="https://www.uttarauniversity.edu.bd">Official website</a></p>
         </div>
         
         </div>

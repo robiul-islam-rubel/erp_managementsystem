@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Registration;
 use App\Models\Course;
+use App\Models\Payment;
 
 use Illuminate\Http\Request;
 
@@ -39,9 +40,13 @@ class AuthenticationController extends Controller
             return view('adminhome',compact('data'));
 
         }
+        if ( ($find == "233404") && ( $pass == "accounts123") ) {
+            return view('account.home');
+        }
         if (( $data->stdid == $find ) && ( $data->password == $pass )) {
             return view('home',compact('find','data'));
         }
+      
      
     }
 
@@ -64,6 +69,23 @@ class AuthenticationController extends Controller
     public function mycourse() {
         $data = Course::find(1);
         return view('course',compact('data'));
+    }
+
+    public function payment(Request $request) {
+        $newpayment = new Payment;
+        $newpayment->semester = $request->semester;
+        $newpayment->stdid = $request->stdid;
+        $newpayment->amount = $request->amount;
+        $newpayment->method = $request->method;
+        $newpayment->save();
+
+        return view('account.home');
+
+    }
+
+    public function mypayment() {
+        $data = Payment::find(2191081008);
+        return view('payment',compact('data'));
     }
 
   

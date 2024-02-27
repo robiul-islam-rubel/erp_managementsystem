@@ -40,6 +40,10 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                                 Result
                             </a>
+                            <a class="nav-link collapsed" href="{{url('mypayment')}}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                My Payment
+                            </a>
                             
                            
                         </div>
