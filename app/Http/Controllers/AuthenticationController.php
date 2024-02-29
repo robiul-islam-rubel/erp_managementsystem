@@ -4,13 +4,15 @@ namespace App\Http\Controllers;
 use App\Models\Registration;
 use App\Models\Course;
 use App\Models\Payment;
+use App\Models\Advertisement;
 
 use Illuminate\Http\Request;
 
 class AuthenticationController extends Controller
 {
     public function index() {
-        return view('index');
+        $data = Advertisement::find(3);
+        return view('index',compact('data'));
     }
 
     public function login() {
@@ -87,6 +89,20 @@ class AuthenticationController extends Controller
         $data = Payment::find(2191081008);
         return view('payment',compact('data'));
     }
+
+    public function addadvertisement(Request $request) {
+        $data = new Advertisement;
+        $data->advertisement = $request->advertisement;
+        $data->save();
+
+        return redirect()->back();
+
+    }
+
+   public function advertisement() {
+
+    return view('admin.addadvertisement');
+   }
 
   
 }

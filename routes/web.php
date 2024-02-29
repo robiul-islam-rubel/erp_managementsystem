@@ -26,6 +26,8 @@ Route::post('/adminhome',[AuthenticationController::class,'newcourse']);
 Route::get('/mycourse',[AuthenticationController::class,'mycourse']);
 Route::post('/payment',[AuthenticationController::class,'payment']);
 Route::get('/mypayment',[AuthenticationController::class,'mypayment']);
+Route::get('/addadvertisement',[AuthenticationController::class,'advertisement']);
+Route::post('/addadvertisement',[AuthenticationController::class,'addadvertisement']);
 
 
 

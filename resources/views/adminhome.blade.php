@@ -26,6 +26,10 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Add Course
                             </a>
+                            <a class="nav-link" href="{{url('addadvertisement')}}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Add Advertisement
+                            </a>
                             
                         </div>
                     </div>
