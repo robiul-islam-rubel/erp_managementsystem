@@ -23,6 +23,22 @@ a:hover {
   color: #86db9f;
   text-decoration: none;
 }
+.card-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+.bg-blue {
+  background-color: blue;
+}
+marquee {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 50px;
+  color: #fdcc2d;
+  background: #001751
+}
 
 h1,
 h2,

@@ -10,7 +10,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="header_logo.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -50,14 +50,14 @@
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="active" href="index.html">Home</a></li>
-          <li><a href="#">About</a></li>
+          <li><a href="{{url('faculty')}}">Faculty</a></li>
           <li><a href="#">Courses</a></li>
           
 
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#"><span>Departments</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+              <li><a href="https://uttarauniversity.edu.bd/department-of-cse">Department of Computer Science and Engineering</a></li>
+              {{-- <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
                   <li><a href="#">Deep Drop Down 1</a></li>
                   <li><a href="#">Deep Drop Down 2</a></li>
@@ -65,10 +65,10 @@
                   <li><a href="#">Deep Drop Down 4</a></li>
                   <li><a href="#">Deep Drop Down 5</a></li>
                 </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
+              </li> --}}
+              <li><a href="https://uttarauniversity.edu.bd/department-of-law/">Department of Law</a></li>
+              <li><a href="https://uttarauniversity.edu.bd/department-of-english/">Department of English</a></li>
+              <li><a href="https://uttarauniversity.edu.bd/department-of-law/">Department of BBA</a></li>
             </ul>
           </li>
           <li><a href="contact.html">Contact</a></li>
@@ -90,6 +90,9 @@
       <a href="courses.html" class="btn-get-started">Get Started</a>
     </div>
   </section><!-- End Hero -->
+  <div>
+    <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();"> 🎓 Admission is ongoing for Spring 2024 (Jan-June) under the Fixed Waiver Policy for a limited time. 30-100% tuition waiver and 50% admission fees off. 100% Founder Scholarship for Students with 2 'A' in O Level &amp; Pass in A Level or GPA 5+5 (SSC + HSC), 50% waiver for Diploma Holders (CSE, EEE, CIVIL, TEXTILE, FDT), 50% waiver (4 years program) for CIVIL, TEXTILE, EEE &amp; MATH, 20% + Result-Based Waiver (for all other 4 years programs),  25-50% Waiver for Master's program,  30% for Alumni, Admission Hotlines: 01872607360-69 </marquee>
+  </div>
 
   <main id="main">
 

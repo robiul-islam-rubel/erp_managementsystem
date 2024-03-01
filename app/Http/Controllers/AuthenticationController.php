@@ -7,6 +7,7 @@ use App\Models\Payment;
 use App\Models\Advertisement;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class AuthenticationController extends Controller
 {
@@ -101,7 +102,15 @@ class AuthenticationController extends Controller
 
    public function advertisement() {
 
-    return view('admin.addadvertisement');
+     return view('admin.addadvertisement');
+   }
+
+   public function get_faculty() {
+        $api_url = 'https://634e48b9f34e1ed826874c92.mockapi.io/rubel/faculty';
+        $response = Http::get($api_url);
+        $data = json_decode($response->body());
+        $data = (array)$data;
+        return view('faculty',compact('data'));
    }
 
   

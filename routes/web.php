@@ -28,6 +28,7 @@ Route::post('/payment',[AuthenticationController::class,'payment']);
 Route::get('/mypayment',[AuthenticationController::class,'mypayment']);
 Route::get('/addadvertisement',[AuthenticationController::class,'advertisement']);
 Route::post('/addadvertisement',[AuthenticationController::class,'addadvertisement']);
+Route::get('/faculty',[AuthenticationController::class,'get_faculty']);
 
 
 
