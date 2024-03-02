@@ -13,7 +13,9 @@ return new class extends Migration
     {
         Schema::create('advertisements', function (Blueprint $table) {
             $table->id();
-            $table->string('advertisement');
+            $table->string('title1');
+            $table->string('title2');
+            $table->string('add_desc');
             $table->timestamps();
         });
     }

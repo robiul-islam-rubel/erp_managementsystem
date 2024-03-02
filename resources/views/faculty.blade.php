@@ -11,6 +11,12 @@
 </head>
 <body>
     <h1 style="padding: 20px;font-weight:bold">Department of Computer Science and Engineering</h1>
+    <form action="" style="padding:20px">
+        <div class="form-group">
+            <input type="search" name="search" class="form-control" placeholder="Search by name and email..">
+        </div>
+        <button class="btn btn-primary" style="margin-top: 10px">Search</button>
+    </form>
     <div class="card-container">
    @foreach ($data as $item)
 

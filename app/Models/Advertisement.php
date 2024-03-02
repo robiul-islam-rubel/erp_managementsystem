@@ -9,6 +9,6 @@ class Advertisement extends Model
 {
     protected $table = 'advertisements';
     protected $primaryKey = 'id';
-    protected $fillable=['advertisement'];
+    protected $fillable=['title1','title2','add_desc'];
     use HasFactory;
 }

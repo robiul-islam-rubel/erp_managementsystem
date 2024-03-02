@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Http;
 class AuthenticationController extends Controller
 {
     public function index() {
-        $data = Advertisement::find(3);
+        $data = Advertisement::latest()->first();
         return view('index',compact('data'));
     }
 
@@ -93,7 +93,9 @@ class AuthenticationController extends Controller
 
     public function addadvertisement(Request $request) {
         $data = new Advertisement;
-        $data->advertisement = $request->advertisement;
+        $data->add_desc = $request->add_desc;
+        $data->title1 = $request->title1;
+        $data->title2 = $request->title2;
         $data->save();
 
         return redirect()->back();
@@ -104,7 +106,7 @@ class AuthenticationController extends Controller
 
      return view('admin.addadvertisement');
    }
-
+// get faculty data from api
    public function get_faculty() {
         $api_url = 'https://634e48b9f34e1ed826874c92.mockapi.io/rubel/faculty';
         $response = Http::get($api_url);

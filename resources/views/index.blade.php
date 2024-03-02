@@ -84,10 +84,10 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex justify-content-center align-items-center">
     <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
-      <h1>Learning Today,<br>Leading Tomorrow</h1>
+      <h1>{{$data->title1}},<br>{{$data->title2}}</h1>
       {{-- <h2>We are team of talented designers making websites with Bootstrap</h2> --}}
-      <h2>{{$data->advertisement}}</h2>
-      <a href="courses.html" class="btn-get-started">Get Started</a>
+      <h2>{{$data->add_desc}}</h2>
+      <a href="https://www.uttarauniversity.edu.bd/about-us" class="btn-get-started">About Us</a>
     </div>
   </section><!-- End Hero -->
   <div>
