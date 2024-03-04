@@ -6,6 +6,7 @@ use App\Models\Course;
 use App\Models\Payment;
 use App\Models\Advertisement;
 use App\Models\Faculty;
+use App\Models\Mark;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
@@ -131,6 +132,34 @@ class AuthenticationController extends Controller
             $data = Faculty::all();
         }
         return view('faculty',compact('data','search'));
+   }
+
+   public function marks() {
+      
+       return view('marks');
+   }
+
+   public function create_marks (Request $request) {
+            $new_info = new Mark;
+            $new_info->std_id = '2191081008';
+            $new_info->name = 'Md. Robiul Islam';
+            $new_info->batch = '47';
+            $new_info->attn = $request['attn'];
+            $new_info->viva = $request['viva'];
+            $new_info->quiz = $request['quiz'];
+            $new_info->assign = $request['assign'];
+            $new_info->mid = $request['mid'];
+            $new_info->final = $request['final'];
+            $new_info->save();
+
+            $data = Mark::all();
+            if ($data =="") {
+                return view('marks','data=>""');
+            }
+            else {
+                return view('marks',compact('data'));
+            }
+
    }
 
   

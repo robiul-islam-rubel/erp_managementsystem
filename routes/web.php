@@ -29,6 +29,8 @@ Route::get('/mypayment',[AuthenticationController::class,'mypayment']);
 Route::get('/addadvertisement',[AuthenticationController::class,'advertisement']);
 Route::post('/addadvertisement',[AuthenticationController::class,'addadvertisement']);
 Route::get('/faculty',[AuthenticationController::class,'get_faculty']);
+Route::get('/marks',[AuthenticationController::class,'marks']);
+Route::post('/marks',[AuthenticationController::class,'create_marks']);
 
 
 
