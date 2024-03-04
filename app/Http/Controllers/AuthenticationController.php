@@ -5,6 +5,7 @@ use App\Models\Registration;
 use App\Models\Course;
 use App\Models\Payment;
 use App\Models\Advertisement;
+use App\Models\Faculty;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
@@ -107,12 +108,29 @@ class AuthenticationController extends Controller
      return view('admin.addadvertisement');
    }
 // get faculty data from api
-   public function get_faculty() {
-        $api_url = 'https://634e48b9f34e1ed826874c92.mockapi.io/rubel/faculty';
-        $response = Http::get($api_url);
-        $data = json_decode($response->body());
-        $data = (array)$data;
-        return view('faculty',compact('data'));
+   public function get_faculty(Request $request) {
+        // $api_url = 'https://634e48b9f34e1ed826874c92.mockapi.io/rubel/faculty';
+        // $response = Http::get($api_url);
+        // $data = json_decode($response->body(),true);
+        // $data = (array)$data;
+        // foreach ($data as $faculty) {
+        //     $newFaculty = new Faculty;
+        //     $newFaculty->name = $faculty['name'];
+        //     $newFaculty->acronym = $faculty['acronym'];
+        //     $newFaculty->designation = $faculty['designation'];
+        //     $newFaculty->mobile = $faculty['mobile'];
+        //     $newFaculty->email = $faculty['email'];
+        //     $newFaculty->social = $faculty['social'];
+        //     $newFaculty->save();
+        // }
+        $search = $request['search'] ?? "";
+        if( $search != "" ) {
+              $data = Faculty::where('name','LIKE',"%$search%")->get();
+        }
+        else {
+            $data = Faculty::all();
+        }
+        return view('faculty',compact('data','search'));
    }
 
   
